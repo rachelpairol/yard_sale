@@ -1,0 +1,259 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark: #232830;
+    --very-ligth-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+
+
+/*styles create new-password*/
+
+.login {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.form-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+    justify-items: center;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 48px;
+    justify-self: center;
+    display: none;
+}
+
+.title {
+    font-size: var(--lg);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: var(--md);
+    color: var(--very-ligth-pink);
+    margin-bottom: 32px;
+    margin-top: 0;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.label {
+    font-size: var(--sm);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.input {
+    background-color: var(--text-input-field);
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    font-size: var(--md);
+    padding: 6px;
+    margin-bottom: 12px;
+}
+
+.primary-button {
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+    margin-bottom: 80px;
+}
+
+.login-button {
+    margin-top: 14px;
+    margin-bottom: 30px;
+}
+
+
+/*styles email_created*/
+
+.email-image {
+    width: 132px;
+    height: 132px;
+    display: flex;
+    background-color: var(--text-input-field);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.email-image img {
+    width: 80px;
+}
+
+.resend {
+    font-size: var(--sm);
+}
+
+.resend span {
+    color: var(--very-ligth-pink);
+}
+
+.resend a {
+    color: var(--hospital-green);
+    text-decoration: none;
+}
+
+
+/*styles login*/
+
+.forgot-pass {
+    color: var(--hospital-green);
+    text-decoration: none;
+    font-size: var(--sm);
+    text-align: center;
+    margin-bottom: 54px;
+}
+
+.input-email {
+    margin-bottom: 22px;
+}
+
+.secundary-button {
+    background-color: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+    margin-bottom: 80px;
+}
+
+
+/*styles create_account*/
+
+.container-account {
+    justify-items: start;
+}
+
+.title-account {
+    font-size: var(--lg);
+    text-align: start;
+    margin-bottom: 30px;
+}
+
+.form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-name,
+.input-email,
+.input-password {
+    margin-bottom: 22px;
+}
+
+
+/*styles account*/
+
+.value {
+    color: var(--very-ligth-pink);
+    font-size: var(--md);
+    max-width: 8px 0 32px 0;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    gap: 26px;
+    place-content: center;
+}
+
+.product-cards {
+    width: 200px;
+}
+
+.product-cards img {
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.product-info div p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--md);
+    margin-bottom: 4px;
+}
+
+.product-info div p:nth-child(2) {
+    font-size: var(--sm);
+    color: var(--very-ligth-pink);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.product-info figure {
+    margin: 0;
+}
+
+.product-info figure img {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width:640px) {
+    .container-account {
+        height: 100%;
+    }
+    .form-account {
+        height: 100%;
+        justify-content: space-between;
+    }
+    .logo {
+        display: block;
+    }
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 100px);
+        gap: 26px;
+    }
+    .product-cards {
+        width: 100px;
+    }
+    .product-cards img {
+        height: 100px;
+        width: 100px;
+    }
+}
